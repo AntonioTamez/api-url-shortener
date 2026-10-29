@@ -38,4 +38,4 @@ Follow the [Phase 0 guide](docs/guides/phase-0.md): it starts with creating the 
 
 - [Roadmap](docs/roadmap.md): phases, features and done criteria.
 - [Architecture](docs/architecture.md): structure and key decisions.
-- [Phase 0 guide](docs/guides/phase-0.md): step-by-step instructions from local to Azure..
+- [Phase 0 guide](docs/guides/phase-0.md): step-by-step instructions from local to Azure.
