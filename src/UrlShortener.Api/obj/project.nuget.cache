@@ -1,17 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jayfblxpuWg=",
-  "success": false,
+  "dgSpecHash": "0sOVN5Z6A14=",
+  "success": true,
   "projectFilePath": "C:\\git\\api\\src\\UrlShortener.Api\\UrlShortener.Api.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1008",
-      "level": "Error",
-      "message": "The following PackageReference items cannot define a value for Version: Microsoft.AspNetCore.OpenApi. Projects using Central Package Management must define a Version value on a PackageVersion item. For more information, visit https://aka.ms/nuget/cpm/gettingstarted",
-      "projectPath": "C:\\git\\api\\src\\UrlShortener.Api\\UrlShortener.Api.csproj",
-      "filePath": "C:\\git\\api\\src\\UrlShortener.Api\\UrlShortener.Api.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "expectedPackageFiles": [
+    "C:\\Users\\anton\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512"
+  ],
+  "logs": []
 }

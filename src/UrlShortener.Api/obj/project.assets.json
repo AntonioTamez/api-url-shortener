@@ -1,12 +1,138 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Microsoft.AspNetCore.OpenApi/10.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "[2.12.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/Microsoft.AspNetCore.OpenApi.targets": {}
+        }
+      },
+      "Microsoft.OpenApi/2.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "UrlShortener.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "UrlShortener.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UrlShortener.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UrlShortener.Application.dll": {}
+        }
+      },
+      "UrlShortener.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/UrlShortener.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UrlShortener.Domain.dll": {}
+        }
+      },
+      "UrlShortener.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "UrlShortener.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UrlShortener.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UrlShortener.Infrastructure.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.AspNetCore.OpenApi/10.0.12": {
+      "sha512": "7RnQ/UKn+kK3JDLmTpW+vVqNErWthGPAVAy1aIiBzv4ucQ6g9NFvOJUuT0PHcpvcJxGVxctMxj6t+NESWMrgHQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/10.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.OpenApi.SourceGenerators.dll",
+        "build/Microsoft.AspNetCore.OpenApi.targets",
+        "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net10.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.OpenApi/2.12.0": {
+      "sha512": "0xB/be+f6qYOhvQPUrVsLrau+fkowYv6gt9RIkajMhwT7sZnqtcA797yW3bS5kgSje+AQW4xZgyLnW641YFioQ==",
+      "type": "package",
+      "path": "microsoft.openapi/2.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net8.0/Microsoft.OpenApi.dll",
+        "lib/net8.0/Microsoft.OpenApi.pdb",
+        "lib/net8.0/Microsoft.OpenApi.xml",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.2.12.0.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
+    "UrlShortener.Application/1.0.0": {
+      "type": "project",
+      "path": "../UrlShortener.Application/UrlShortener.Application.csproj",
+      "msbuildProject": "../UrlShortener.Application/UrlShortener.Application.csproj"
+    },
+    "UrlShortener.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UrlShortener.Domain/UrlShortener.Domain.csproj",
+      "msbuildProject": "../UrlShortener.Domain/UrlShortener.Domain.csproj"
+    },
+    "UrlShortener.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../UrlShortener.Infrastructure/UrlShortener.Infrastructure.csproj",
+      "msbuildProject": "../UrlShortener.Infrastructure/UrlShortener.Infrastructure.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.OpenApi >= 10.0.12"
+      "Microsoft.AspNetCore.OpenApi >= 10.0.12",
+      "UrlShortener.Application >= 1.0.0",
+      "UrlShortener.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -65,8 +191,17 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[10.0.12, )"
+            "version": "[10.0.12, )",
+            "versionCentrallyManaged": true
           }
+        },
+        "centralPackageVersions": {
+          "coverlet.collector": "6.0.4",
+          "Microsoft.AspNetCore.Mvc.Testing": "10.0.14",
+          "Microsoft.AspNetCore.OpenApi": "10.0.12",
+          "Microsoft.NET.Test.Sdk": "17.14.1",
+          "xunit": "2.9.3",
+          "xunit.runner.visualstudio": "3.1.4"
         },
         "imports": [
           "net461",
@@ -504,12 +639,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1008",
-      "level": "Error",
-      "message": "The following PackageReference items cannot define a value for Version: Microsoft.AspNetCore.OpenApi. Projects using Central Package Management must define a Version value on a PackageVersion item. For more information, visit https://aka.ms/nuget/cpm/gettingstarted"
-    }
-  ]
+  }
 }
