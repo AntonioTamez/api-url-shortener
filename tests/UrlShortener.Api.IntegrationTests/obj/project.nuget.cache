@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "wl3sFkQzNVw=",
+  "success": false,
+  "projectFilePath": "C:\\git\\api\\tests\\UrlShortener.Api.IntegrationTests\\UrlShortener.Api.IntegrationTests.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1008",
+      "level": "Error",
+      "message": "The following PackageReference items cannot define a value for Version: coverlet.collector, Microsoft.NET.Test.Sdk, xunit, xunit.runner.visualstudio. Projects using Central Package Management must define a Version value on a PackageVersion item. For more information, visit https://aka.ms/nuget/cpm/gettingstarted",
+      "projectPath": "C:\\git\\api\\tests\\UrlShortener.Api.IntegrationTests\\UrlShortener.Api.IntegrationTests.csproj",
+      "filePath": "C:\\git\\api\\tests\\UrlShortener.Api.IntegrationTests\\UrlShortener.Api.IntegrationTests.csproj",
+      "targetGraphs": []
+    }
+  ]
+}
