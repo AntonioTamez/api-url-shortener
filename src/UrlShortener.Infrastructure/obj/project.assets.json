@@ -1,11 +1,48 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "UrlShortener.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "UrlShortener.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UrlShortener.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UrlShortener.Application.dll": {}
+        }
+      },
+      "UrlShortener.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/UrlShortener.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UrlShortener.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "UrlShortener.Application/1.0.0": {
+      "type": "project",
+      "path": "../UrlShortener.Application/UrlShortener.Application.csproj",
+      "msbuildProject": "../UrlShortener.Application/UrlShortener.Application.csproj"
+    },
+    "UrlShortener.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UrlShortener.Domain/UrlShortener.Domain.csproj",
+      "msbuildProject": "../UrlShortener.Domain/UrlShortener.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "UrlShortener.Application >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\anton\\.nuget\\packages\\": {}
@@ -33,7 +70,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\git\\api\\src\\UrlShortener.Application\\UrlShortener.Application.csproj": {
+              "projectPath": "C:\\git\\api\\src\\UrlShortener.Application\\UrlShortener.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
