@@ -1,2 +1,38 @@
+# Local-only folders
 docs/guides
 .atl/
+
+# Build output (regenerated on every build, in every project)
+[Bb]in/
+[Oo]bj/
+
+# Publish output
+[Pp]ublish/
+*.zip
+
+# Test results and coverage reports
+[Tt]est[Rr]esults/
+coverage*.xml
+coverage*.json
+*.coverage
+*.trx
+
+# SonarQube scanner working folder
+.sonarqube/
+
+# IDE and editor files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local secrets and environment files
+*.env
+.env.*
+appsettings.*.local.json
